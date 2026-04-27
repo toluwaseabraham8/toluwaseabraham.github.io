@@ -1,0 +1,715 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Toluwase Abraham — Content &amp; Brand Strategist</title>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Barlow:ital,wght@0,300;0,400;0,500;1,300&family=Barlow+Condensed:wght@300;400;600;700&display=swap" rel="stylesheet">
+<style>
+/* ── RESET & BASE ── */
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{
+  --gold:#c8a96e;
+  --gold-lt:#e8d5a3;
+  --gold-dk:#9a7e4e;
+  --ink:#0e0c0a;
+  --ink2:#1a1714;
+  --ink3:#252018;
+  --cream:#f4f1ec;
+  --cream2:#ede9e2;
+  --muted:#8a8070;
+  --muted2:#6a6058;
+  --white:#fdfbf8;
+  --rule:rgba(200,169,110,.18);
+  --rule2:rgba(200,169,110,.08);
+  --serif:'Cormorant Garamond',Georgia,serif;
+  --sans:'Barlow',sans-serif;
+  --cond:'Barlow Condensed',sans-serif;
+}
+html{scroll-behavior:smooth}
+body{background:var(--ink);color:var(--cream);font-family:var(--sans);font-weight:300;line-height:1.7;overflow-x:hidden}
+a{color:inherit;text-decoration:none}
+img{display:block;max-width:100%}
+
+/* ── NAV ── */
+nav{
+  position:fixed;top:0;left:0;right:0;z-index:100;
+  display:flex;align-items:center;justify-content:space-between;
+  padding:18px 5vw;
+  background:rgba(14,12,10,.92);
+  backdrop-filter:blur(12px);
+  border-bottom:1px solid var(--rule2);
+}
+.nav-logo{font-family:var(--cond);font-weight:700;font-size:15px;letter-spacing:4px;text-transform:uppercase;color:var(--gold)}
+.nav-links{display:flex;gap:30px}
+.nav-links a{font-family:var(--cond);font-size:11px;letter-spacing:2px;text-transform:uppercase;color:var(--muted);transition:color .2s}
+.nav-links a:hover{color:var(--gold)}
+.nav-cta{font-family:var(--cond);font-size:11px;letter-spacing:2px;text-transform:uppercase;border:1px solid var(--gold-dk);color:var(--gold);padding:7px 18px;border-radius:1px;transition:.2s}
+.nav-cta:hover{background:var(--gold);color:var(--ink)}
+
+/* ── SECTION WRAPPER ── */
+section{padding:90px 5vw}
+.inner{max-width:1100px;margin:0 auto}
+
+/* ── SECTION LABELS ── */
+.section-label{
+  font-family:var(--cond);font-size:10px;letter-spacing:4px;text-transform:uppercase;
+  color:var(--gold);margin-bottom:14px;display:flex;align-items:center;gap:12px;
+}
+.section-label::after{content:'';flex:1;max-width:60px;height:1px;background:var(--gold-dk)}
+
+/* ── HERO ── */
+#hero{
+  min-height:100vh;display:flex;align-items:center;padding-top:100px;
+  background:var(--ink);position:relative;overflow:hidden;
+}
+.hero-bg{
+  position:absolute;inset:0;
+  background:radial-gradient(ellipse 70% 60% at 72% 50%,rgba(200,169,110,.04) 0%,transparent 70%);
+  pointer-events:none;
+}
+.hero-rule{position:absolute;top:0;left:5vw;right:5vw;height:1px;background:var(--rule2)}
+.hero-grid{display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:center;width:100%;max-width:1100px;margin:0 auto}
+.hero-left{}
+.hero-eyebrow{font-family:var(--cond);font-size:10px;letter-spacing:5px;text-transform:uppercase;color:var(--gold);margin-bottom:20px}
+.hero-name{
+  font-family:var(--serif);font-size:clamp(42px,6vw,82px);font-weight:300;
+  line-height:1.05;letter-spacing:-1px;color:var(--white);margin-bottom:10px;
+}
+.hero-name em{font-style:italic;color:var(--gold)}
+.hero-title{font-family:var(--cond);font-size:clamp(14px,2vw,18px);font-weight:400;letter-spacing:3px;text-transform:uppercase;color:var(--muted);margin-bottom:28px}
+.hero-line{width:50px;height:1px;background:var(--gold-dk);margin-bottom:28px}
+.hero-tagline{font-size:clamp(14px,1.6vw,17px);color:var(--muted);line-height:1.7;max-width:440px;font-weight:300}
+.hero-tagline strong{color:var(--cream);font-weight:400}
+.hero-actions{display:flex;gap:16px;margin-top:36px;flex-wrap:wrap}
+.btn-primary{font-family:var(--cond);font-size:12px;letter-spacing:2px;text-transform:uppercase;background:var(--gold);color:var(--ink);padding:13px 28px;border-radius:1px;font-weight:600;transition:.2s}
+.btn-primary:hover{background:var(--gold-lt)}
+.btn-outline{font-family:var(--cond);font-size:12px;letter-spacing:2px;text-transform:uppercase;border:1px solid var(--muted2);color:var(--muted);padding:12px 28px;border-radius:1px;transition:.2s}
+.btn-outline:hover{border-color:var(--gold);color:var(--gold)}
+.hero-right{}
+.hero-stats{display:grid;grid-template-columns:1fr 1fr;gap:1px;background:var(--rule);border:1px solid var(--rule)}
+.stat{background:var(--ink2);padding:28px 24px}
+.stat-num{font-family:var(--serif);font-size:clamp(28px,4vw,46px);font-weight:300;color:var(--gold);line-height:1;margin-bottom:6px}
+.stat-label{font-family:var(--cond);font-size:9px;letter-spacing:2px;text-transform:uppercase;color:var(--muted);line-height:1.4}
+.hero-contact{margin-top:24px;display:flex;flex-direction:column;gap:7px}
+.contact-row{display:flex;align-items:center;gap:10px;font-family:var(--cond);font-size:11px;letter-spacing:1px;color:var(--muted)}
+.contact-icon{width:20px;color:var(--gold-dk);font-size:14px}
+
+/* ── ABOUT ── */
+#about{background:var(--ink2);border-top:1px solid var(--rule2)}
+.about-grid{display:grid;grid-template-columns:2fr 3fr;gap:70px;align-items:start}
+.about-hl{font-family:var(--serif);font-size:clamp(28px,4vw,48px);font-weight:300;line-height:1.2;color:var(--white);margin-bottom:24px}
+.about-hl em{font-style:italic;color:var(--gold)}
+.about-body{font-size:15px;color:var(--muted);line-height:1.8;margin-bottom:18px}
+.about-body strong{color:var(--cream);font-weight:400}
+.skill-grid{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:28px}
+.skill-tag{font-family:var(--cond);font-size:10px;letter-spacing:1.5px;text-transform:uppercase;border:1px solid var(--rule);color:var(--muted);padding:8px 14px;text-align:center}
+.philosophy{margin-top:50px;border-left:2px solid var(--gold-dk);padding-left:24px}
+.philosophy-quote{font-family:var(--serif);font-size:clamp(18px,2.4vw,26px);font-style:italic;font-weight:300;color:var(--cream);line-height:1.5;margin-bottom:8px}
+.philosophy-attr{font-family:var(--cond);font-size:10px;letter-spacing:2px;text-transform:uppercase;color:var(--gold-dk)}
+
+/* ── CASE STUDIES ── */
+#cases{background:var(--ink);border-top:1px solid var(--rule2)}
+.cases-intro{max-width:680px;margin-bottom:60px}
+.cases-intro h2{font-family:var(--serif);font-size:clamp(30px,4vw,52px);font-weight:300;color:var(--white);margin-bottom:16px;line-height:1.15}
+.cases-intro p{font-size:15px;color:var(--muted);line-height:1.8}
+.case-block{display:grid;grid-template-columns:1fr 1fr;gap:0;border:1px solid var(--rule);margin-bottom:48px;overflow:hidden}
+.case-block.reverse{direction:rtl}
+.case-block.reverse>*{direction:ltr}
+.case-meta{background:var(--ink2);padding:48px 42px;display:flex;flex-direction:column;justify-content:space-between}
+.case-tag{font-family:var(--cond);font-size:9px;letter-spacing:3px;text-transform:uppercase;color:var(--gold);border:1px solid var(--gold-dk);display:inline-block;padding:4px 12px;margin-bottom:20px;align-self:flex-start}
+.case-title{font-family:var(--serif);font-size:clamp(22px,3vw,36px);font-weight:300;color:var(--white);line-height:1.2;margin-bottom:14px}
+.case-sub{font-size:13px;color:var(--muted);line-height:1.7;margin-bottom:24px;font-style:italic}
+.case-metrics{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;padding-top:24px;border-top:1px solid var(--rule2)}
+.metric{text-align:center}
+.metric-val{font-family:var(--serif);font-size:clamp(20px,2.5vw,30px);color:var(--gold);line-height:1}
+.metric-lbl{font-family:var(--cond);font-size:8px;letter-spacing:1.5px;text-transform:uppercase;color:var(--muted);margin-top:4px;line-height:1.3}
+.case-detail{background:var(--ink3);padding:48px 42px}
+.case-detail h3{font-family:var(--cond);font-size:11px;letter-spacing:2px;text-transform:uppercase;color:var(--gold);margin-bottom:16px}
+.case-detail ul{list-style:none;display:flex;flex-direction:column;gap:11px}
+.case-detail ul li{font-size:14px;color:var(--muted);padding-left:16px;position:relative;line-height:1.6}
+.case-detail ul li::before{content:'→';position:absolute;left:0;color:var(--gold-dk);font-size:11px;top:3px}
+.case-detail ul li strong{color:var(--cream);font-weight:400}
+.case-frameworks{margin-top:28px;padding-top:24px;border-top:1px solid var(--rule2)}
+.fw-row{display:flex;gap:8px;margin-top:12px;flex-wrap:wrap}
+.fw-tag{font-family:var(--cond);font-size:9px;letter-spacing:1px;text-transform:uppercase;background:rgba(200,169,110,.08);border:1px solid var(--rule);color:var(--gold-dk);padding:4px 10px}
+
+/* Music plan case — full width variation */
+.case-block.full-width{grid-template-columns:1fr;direction:ltr}
+.case-block.full-width .case-meta{border-bottom:1px solid var(--rule2)}
+.case-block.full-width .case-metrics{grid-template-columns:repeat(5,1fr)}
+.case-content-cols{display:grid;grid-template-columns:1fr 1fr 1fr;gap:0;background:var(--ink3)}
+.content-col{padding:32px;border-right:1px solid var(--rule2)}
+.content-col:last-child{border-right:none}
+.content-col h4{font-family:var(--cond);font-size:10px;letter-spacing:2px;text-transform:uppercase;color:var(--gold);margin-bottom:14px;padding-bottom:8px;border-bottom:1px solid var(--rule2)}
+.content-col ul{list-style:none;display:flex;flex-direction:column;gap:8px}
+.content-col ul li{font-size:13px;color:var(--muted);line-height:1.5}
+.content-col ul li::before{content:'·';color:var(--gold-dk);margin-right:6px}
+
+/* ── FRAMEWORKS ── */
+#frameworks{background:var(--ink2);border-top:1px solid var(--rule2)}
+.fw-section-title{font-family:var(--serif);font-size:clamp(28px,4vw,48px);font-weight:300;color:var(--white);margin-bottom:10px;max-width:700px;line-height:1.15}
+.fw-section-sub{font-size:15px;color:var(--muted);margin-bottom:56px;max-width:580px;line-height:1.7}
+.frameworks-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--rule)}
+.fw-card{background:var(--ink2);padding:36px 32px}
+.fw-card:hover{background:var(--ink3)}
+.fw-icon{font-family:var(--serif);font-size:42px;font-weight:300;color:var(--gold);opacity:.7;line-height:1;margin-bottom:16px}
+.fw-name{font-family:var(--cond);font-size:13px;letter-spacing:3px;text-transform:uppercase;font-weight:600;color:var(--white);margin-bottom:6px}
+.fw-tag-small{font-family:var(--cond);font-size:9px;letter-spacing:1.5px;text-transform:uppercase;color:var(--gold-dk);margin-bottom:14px}
+.fw-desc{font-size:13px;color:var(--muted);line-height:1.7}
+.fw-items{margin-top:16px;display:flex;flex-direction:column;gap:6px}
+.fw-item{font-family:var(--cond);font-size:10px;letter-spacing:1px;text-transform:uppercase;color:var(--muted2);padding-left:12px;position:relative}
+.fw-item::before{content:'';position:absolute;left:0;top:50%;width:5px;height:1px;background:var(--gold-dk)}
+
+/* ── VIDEO PORTFOLIO ── */
+#video{background:var(--ink);border-top:1px solid var(--rule2)}
+.video-intro{max-width:680px;margin-bottom:56px}
+.video-intro h2{font-family:var(--serif);font-size:clamp(28px,4vw,48px);font-weight:300;color:var(--white);margin-bottom:14px;line-height:1.15}
+.video-intro p{font-size:15px;color:var(--muted);line-height:1.8}
+.scene-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:var(--rule)}
+.scene-card{background:var(--ink2);padding:22px 20px;transition:.2s}
+.scene-card:hover{background:var(--ink3)}
+.sc-num{font-family:var(--serif);font-size:30px;font-weight:300;color:var(--gold);opacity:.5;line-height:1;margin-bottom:8px}
+.sc-type{font-family:var(--cond);font-size:8px;letter-spacing:2px;text-transform:uppercase;color:var(--gold-dk);margin-bottom:6px}
+.sc-title{font-family:var(--cond);font-size:12px;letter-spacing:.5px;color:var(--cream);margin-bottom:6px;font-weight:600}
+.sc-desc{font-size:11px;color:var(--muted2);line-height:1.5}
+
+/* ── SERVICES ── */
+#services{background:var(--ink2);border-top:1px solid var(--rule2)}
+.services-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--rule);margin-top:48px}
+.svc{background:var(--ink2);padding:36px 32px;border-bottom:1px solid var(--rule)}
+.svc-num{font-family:var(--serif);font-size:48px;font-weight:300;color:var(--rule);line-height:1;margin-bottom:14px}
+.svc-name{font-family:var(--cond);font-size:13px;letter-spacing:2px;text-transform:uppercase;color:var(--white);margin-bottom:10px;font-weight:600}
+.svc-desc{font-size:13px;color:var(--muted);line-height:1.7}
+.svc-list{margin-top:14px;display:flex;flex-direction:column;gap:5px}
+.svc-list span{font-family:var(--cond);font-size:9px;letter-spacing:1.5px;text-transform:uppercase;color:var(--muted2)}
+
+/* ── CONTACT ── */
+#contact{background:var(--ink);border-top:1px solid var(--rule2)}
+.contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:80px;align-items:start}
+.contact-left h2{font-family:var(--serif);font-size:clamp(30px,4vw,56px);font-weight:300;color:var(--white);line-height:1.1;margin-bottom:20px}
+.contact-left h2 em{font-style:italic;color:var(--gold)}
+.contact-left p{font-size:15px;color:var(--muted);line-height:1.8;max-width:420px;margin-bottom:36px}
+.contact-items{display:flex;flex-direction:column;gap:20px}
+.c-item{display:flex;align-items:flex-start;gap:16px}
+.c-icon{width:36px;height:36px;border:1px solid var(--rule);display:flex;align-items:center;justify-content:center;color:var(--gold);font-size:14px;flex-shrink:0;font-family:var(--serif)}
+.c-label{font-family:var(--cond);font-size:9px;letter-spacing:2px;text-transform:uppercase;color:var(--muted2);margin-bottom:3px}
+.c-val{font-size:14px;color:var(--cream)}
+.contact-right{padding-top:10px}
+.cta-box{border:1px solid var(--rule);padding:40px 36px;background:var(--ink2)}
+.cta-box h3{font-family:var(--serif);font-size:clamp(20px,2.8vw,30px);font-weight:300;color:var(--white);margin-bottom:12px;line-height:1.3}
+.cta-box p{font-size:14px;color:var(--muted);line-height:1.7;margin-bottom:28px}
+.cta-tags{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:28px}
+.cta-tag{font-family:var(--cond);font-size:9px;letter-spacing:1.5px;text-transform:uppercase;border:1px solid var(--rule);color:var(--muted2);padding:5px 12px}
+
+/* ── FOOTER ── */
+footer{background:var(--ink2);border-top:1px solid var(--rule2);padding:32px 5vw;display:flex;align-items:center;justify-content:space-between;flex-wrap:gap;gap:16px}
+.foot-logo{font-family:var(--cond);font-size:13px;letter-spacing:3px;text-transform:uppercase;color:var(--gold)}
+.foot-note{font-family:var(--cond);font-size:10px;letter-spacing:1px;color:var(--muted2)}
+
+/* ── DIVIDERS ── */
+.gold-rule{height:1px;background:linear-gradient(to right,transparent,var(--gold-dk),transparent);margin:40px 0;opacity:.4}
+
+/* ── RESPONSIVE ── */
+@media(max-width:900px){
+  .hero-grid,.about-grid,.case-block,.contact-grid{grid-template-columns:1fr}
+  .case-block.reverse{direction:ltr}
+  .frameworks-grid,.services-grid{grid-template-columns:1fr 1fr}
+  .scene-grid{grid-template-columns:repeat(2,1fr)}
+  .case-block.full-width .case-metrics{grid-template-columns:repeat(3,1fr)}
+  .case-content-cols{grid-template-columns:1fr}
+  .content-col{border-right:none;border-bottom:1px solid var(--rule2)}
+}
+@media(max-width:600px){
+  nav .nav-links{display:none}
+  .frameworks-grid,.services-grid{grid-template-columns:1fr}
+  .hero-stats{grid-template-columns:1fr 1fr}
+}
+
+/* ── PRINT / PDF TWEAKS ── */
+@media print{
+  nav,#video{display:none}
+  body{background:#fff!important;color:#111!important}
+  section{padding:40px 5vw}
+  :root{--ink:#fff;--ink2:#f8f6f3;--ink3:#f0ede7;--cream:#111;--muted:#555;--white:#000}
+}
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <div class="nav-logo">TA</div>
+  <div class="nav-links">
+    <a href="#about">About</a>
+    <a href="#cases">Work</a>
+    <a href="#frameworks">Frameworks</a>
+    <a href="#services">Services</a>
+    <a href="#contact">Contact</a>
+  </div>
+  <a href="mailto:toluwaseabraham@outlook.com" class="nav-cta">Hire Me</a>
+</nav>
+
+<!-- HERO -->
+<section id="hero">
+  <div class="hero-bg"></div>
+  <div class="hero-rule"></div>
+  <div class="hero-grid inner">
+    <div class="hero-left">
+      <div class="hero-eyebrow">Portfolio &nbsp;·&nbsp; Content &amp; Brand Strategy</div>
+      <h1 class="hero-name">Toluwase<br><em>Abraham</em></h1>
+      <div class="hero-title">Brand &amp; Content Strategist</div>
+      <div class="hero-line"></div>
+      <p class="hero-tagline">
+        I build <strong>systems that move people</strong> — from content calendars to brand frameworks,
+        social media strategies to CMS governance. Every piece of content has a job.
+        Every brand has a story worth building.
+      </p>
+      <div class="hero-actions">
+        <a href="#cases" class="btn-primary">View My Work</a>
+        <a href="#contact" class="btn-outline">Start a Conversation</a>
+      </div>
+    </div>
+    <div class="hero-right">
+      <div class="hero-stats">
+        <div class="stat"><div class="stat-num">3+</div><div class="stat-label">Active Client<br>Engagements</div></div>
+        <div class="stat"><div class="stat-num">30%</div><div class="stat-label">Projected Growth<br>Delivered</div></div>
+        <div class="stat"><div class="stat-num">4</div><div class="stat-label">Platforms Managed<br>Simultaneously</div></div>
+        <div class="stat"><div class="stat-num">13</div><div class="stat-label">Video Portfolio<br>Productions Briefed</div></div>
+      </div>
+      <div class="hero-contact">
+        <div class="contact-row"><span class="contact-icon">@</span>toluwaseabraham@outlook.com</div>
+        <div class="contact-row"><span class="contact-icon">✆</span>+234 802 100 1575</div>
+        <div class="contact-row"><span class="contact-icon">◈</span>inwiththepotter.wordpress.com</div>
+        <div class="contact-row"><span class="contact-icon">◉</span>Ibadan, Nigeria</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ABOUT -->
+<section id="about">
+  <div class="inner">
+    <div class="about-grid">
+      <div>
+        <div class="section-label">About</div>
+        <h2 class="about-hl">Strategy that starts <em>inside</em> the brand.</h2>
+        <p class="about-body">
+          I'm a brand and content strategist based in Ibadan, Nigeria with hands-on experience
+          building content ecosystems for ministry organisations, nonprofits, and education brands.
+          My work spans <strong>social media strategy, brand identity, CMS governance, SEO content,
+          and crisis communications</strong> — always built around systems that scale.
+        </p>
+        <p class="about-body">
+          I believe a brand story cannot stick if there are no internal believers.
+          That principle drives every engagement: I build inward first, then outward —
+          culture before content, structure before publish.
+        </p>
+        <p class="about-body">
+          I bring additional skills in <strong>photography, videography, copywriting, and public relations</strong>
+          that make me a full-stack creative partner, not just a strategist on a deck.
+        </p>
+        <div class="skill-grid">
+          <div class="skill-tag">Content Strategy</div>
+          <div class="skill-tag">Brand Strategy</div>
+          <div class="skill-tag">Social Media Strategy</div>
+          <div class="skill-tag">CMS Governance</div>
+          <div class="skill-tag">SEO &amp; Content Research</div>
+          <div class="skill-tag">Crisis Communications</div>
+          <div class="skill-tag">Copywriting</div>
+          <div class="skill-tag">Community Management</div>
+          <div class="skill-tag">Photography</div>
+          <div class="skill-tag">Videography</div>
+          <div class="skill-tag">Public Relations</div>
+          <div class="skill-tag">Editorial Systems</div>
+        </div>
+      </div>
+      <div>
+        <div class="philosophy">
+          <div class="philosophy-quote">"A brand is no longer what we tell the consumer it is — it is what consumers tell each other it is."</div>
+          <div class="philosophy-attr">— Scott Cook, Founder, Intuit &nbsp;·&nbsp; Cited in Gen218singles Strategy</div>
+        </div>
+        <div class="gold-rule"></div>
+        <div class="philosophy">
+          <div class="philosophy-quote">"A brand story cannot stick if there are no internal believers."</div>
+          <div class="philosophy-attr">— FPC Branding Strategy, 2023</div>
+        </div>
+        <div class="gold-rule"></div>
+        <div class="philosophy">
+          <div class="philosophy-quote">"Good content doesn't just inform — it moves people. Every piece had a job."</div>
+          <div class="philosophy-attr">— Gen218singles Funnel Strategy</div>
+        </div>
+        <div class="gold-rule"></div>
+        <p style="font-size:13px;color:var(--muted);line-height:1.7;font-style:italic;">
+          Available for on-site engagements in Ibadan at no additional travel cost.
+          Open to remote and hybrid strategy roles across Nigeria and the diaspora.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CASE STUDIES -->
+<section id="cases">
+  <div class="inner">
+    <div class="cases-intro">
+      <div class="section-label">Selected Work</div>
+      <h2>Four engagements.<br>One consistent approach.</h2>
+      <p>Each project below represents a full strategic engagement — from audience research and framework design to content execution and community management. All work is drawn from live client documents.</p>
+    </div>
+
+    <!-- CASE 01: Gen218singles -->
+    <div class="case-block">
+      <div class="case-meta">
+        <div>
+          <div class="case-tag">Social Media Strategy</div>
+          <h3 class="case-title">Gen218singles Ministry — Social Media Strategy</h3>
+          <p class="case-sub">A full social media strategy for a Christian singles ministry, built to harness social influence for evangelism across Instagram, Facebook, YouTube, and X.</p>
+        </div>
+        <div class="case-metrics">
+          <div class="metric"><div class="metric-val">+30%</div><div class="metric-lbl">Follower Growth<br>Projected (6 Months)</div></div>
+          <div class="metric"><div class="metric-val">4</div><div class="metric-lbl">Platforms<br>Strategised</div></div>
+          <div class="metric"><div class="metric-val">100K</div><div class="metric-lbl">Facebook<br>Followers Served</div></div>
+        </div>
+      </div>
+      <div class="case-detail">
+        <h3>What I Delivered</h3>
+        <ul>
+          <li><strong>Platform audit</strong> of Instagram (@gen218singles_mfm, 3,113 followers), Facebook (83K likes, 100K followers), YouTube (4.91K subscribers, avg 700 views), and X (2,821 followers)</li>
+          <li><strong>ViWC framework</strong> (Videos, Words on Marble, Community) for Instagram — short wisdom videos, quote cards from the G.O.'s messages, and community engagement</li>
+          <li><strong>VEC framework</strong> (Videos, Excerpts, Community) for Facebook — longer-form content not suited to Instagram, song ministrations, and testimony features</li>
+          <li><strong>GAO (Go All Out)</strong> omnichannel framework covering Website, Hangouts, Audios, Stories, Vox Pop, and a future content studio roadmap</li>
+          <li><strong>Crisis communication framework</strong> — community management handbook for each platform with scenario-based response protocols</li>
+          <li><strong>30% follower growth projection</strong> with a 6-month implementation roadmap across all channels</li>
+        </ul>
+        <div class="case-frameworks">
+          <h3>Frameworks Used</h3>
+          <div class="fw-row">
+            <span class="fw-tag">ViWC</span><span class="fw-tag">VEC</span><span class="fw-tag">GAO</span><span class="fw-tag">Crisis Comms Framework</span><span class="fw-tag">Channel Audit</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- CASE 02: FPC -->
+    <div class="case-block reverse">
+      <div class="case-meta">
+        <div>
+          <div class="case-tag">Branding Strategy</div>
+          <h3 class="case-title">Family Protection Club — Brand &amp; Identity Strategy</h3>
+          <p class="case-sub">A comprehensive branding strategy for a youth-focused mentoring organisation, built around the BBCM framework and culminating in the "Best Friend Brand" positioning.</p>
+        </div>
+        <div class="case-metrics">
+          <div class="metric"><div class="metric-val">BBCM</div><div class="metric-lbl">4-Pillar Brand<br>Framework</div></div>
+          <div class="metric"><div class="metric-val">BFB</div><div class="metric-lbl">Best Friend<br>Brand Model</div></div>
+          <div class="metric"><div class="metric-val">5</div><div class="metric-lbl">Deliverable<br>Documents</div></div>
+        </div>
+      </div>
+      <div class="case-detail">
+        <h3>What I Delivered</h3>
+        <ul>
+          <li><strong>BBCM Framework</strong> — four-pillar brand strategy: Brand In (internal culture), Brand Out (style guide), Content Strategy (the Vault), and Measure &amp; Optimise (the Bridge)</li>
+          <li><strong>Culture deck brief</strong> — internal alignment strategy to convert volunteers into brand ambassadors before external outreach begins</li>
+          <li><strong>Style guide specification</strong> — brand voice, communication tone guidelines, typography, and visual identity principles</li>
+          <li><strong>Content strategy brief</strong> — audience-segmented content creation process for FPC's multi-generational target groups</li>
+          <li><strong>Community management framework</strong> — audience communication policy and crisis communication document</li>
+          <li><strong>Best Friend Brand positioning</strong> — 5-dimension brand relationship model: In-dependence, Love &amp; Passion, Commitment, Self-Concept Connection, Intimacy</li>
+        </ul>
+        <div class="case-frameworks">
+          <h3>Frameworks Used</h3>
+          <div class="fw-row">
+            <span class="fw-tag">BBCM</span><span class="fw-tag">Best Friend Brand</span><span class="fw-tag">Style Guide</span><span class="fw-tag">Culture Deck</span><span class="fw-tag">Audience Segmentation</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- CASE 03: BCM -->
+    <div class="case-block">
+      <div class="case-meta">
+        <div>
+          <div class="case-tag">Content &amp; CMS Strategy</div>
+          <h3 class="case-title">Beersheba Christian Mission — Website &amp; Content Operations</h3>
+          <p class="case-sub">End-to-end content strategy and CMS governance for a special-needs Christian mission, positioning beershebamission.com as an organic search authority on autism and child development in Nigeria.</p>
+        </div>
+        <div class="case-metrics">
+          <div class="metric"><div class="metric-val">SEO</div><div class="metric-lbl">Keyword Research<br>Delivered</div></div>
+          <div class="metric"><div class="metric-val">WP</div><div class="metric-lbl">WordPress CMS<br>Governed</div></div>
+          <div class="metric"><div class="metric-val">4+</div><div class="metric-lbl">Author Roles<br>Structured</div></div>
+        </div>
+      </div>
+      <div class="case-detail">
+        <h3>What I Delivered</h3>
+        <ul>
+          <li><strong>Keyword research and gap analysis</strong> — identified low-competition, high-relevance keywords including "autism support for Christian families" (1,200/mo) and "special needs caregiver Nigeria" (640/mo)</li>
+          <li><strong>WordPress CMS governance</strong> — content categories, author permission levels, editorial workflow states (Draft → Review → Approved → Published), and media library organisation by campaign</li>
+          <li><strong>Content brief framework</strong> — target keyword, angle, platform, word count, CTA, and repurpose plan for every piece</li>
+          <li><strong>Blog content strategy</strong> covering learning difficulties, autism interventions, special education, and Christian caregiving — positioning BCM as a knowledge authority</li>
+          <li><strong>Multi-platform repurposing logic</strong> — each website article designed with downstream social and newsletter formats specified at brief stage</li>
+          <li>Built in partnership with <strong>Epower.ng</strong></li>
+        </ul>
+        <div class="case-frameworks">
+          <h3>Frameworks Used</h3>
+          <div class="fw-row">
+            <span class="fw-tag">SEO Gap Analysis</span><span class="fw-tag">CMS Governance</span><span class="fw-tag">Content Brief System</span><span class="fw-tag">Editorial Workflow</span><span class="fw-tag">Repurpose Mapping</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- CASE 04: City Music Plan - FULL WIDTH -->
+    <div class="case-block full-width">
+      <div class="case-meta">
+        <div>
+          <div class="case-tag">Content Marketing Strategy</div>
+          <h3 class="case-title">City Music School — 24-Month Content Marketing Strategy</h3>
+          <p class="case-sub">A comprehensive content marketing strategy for a city-branded music school, designed to build brand awareness, establish thought leadership in music education, and generate 500+ annual class inquiries within two years.</p>
+        </div>
+        <div class="case-metrics">
+          <div class="metric"><div class="metric-val">5K</div><div class="metric-lbl">Engaged Followers<br>Target (18 Months)</div></div>
+          <div class="metric"><div class="metric-val">500+</div><div class="metric-lbl">Class Inquiries<br>Annual (Year 2)</div></div>
+          <div class="metric"><div class="metric-val">10+</div><div class="metric-lbl">Thought Leadership<br>Pieces (24 Months)</div></div>
+          <div class="metric"><div class="metric-val">10+</div><div class="metric-lbl">Community<br>Partnerships</div></div>
+          <div class="metric"><div class="metric-val">6</div><div class="metric-lbl">Channels<br>Strategised</div></div>
+        </div>
+      </div>
+      <div class="case-content-cols">
+        <div class="content-col">
+          <h4>Strategic Objectives</h4>
+          <ul>
+            <li>Brand awareness: 50% of city families reached within 12 months</li>
+            <li>5,000 engaged cross-platform followers by month 18</li>
+            <li>10+ high-impact thought leadership pieces within 24 months</li>
+            <li>500 annual class/teacher inquiries by year two</li>
+            <li>10+ local organisation partnerships</li>
+          </ul>
+          <br>
+          <h4>Target Audiences</h4>
+          <ul>
+            <li>Parents of children ages 4–18 (middle to upper-middle class)</li>
+            <li>Music teachers and instructors ages 22–45</li>
+            <li>Community leaders and music enthusiasts</li>
+            <li>Local schools seeking extracurricular programs</li>
+          </ul>
+        </div>
+        <div class="content-col">
+          <h4>Five Content Pillars</h4>
+          <ul>
+            <li>Child Development Through Music — cognitive skills, emotional intelligence, social growth</li>
+            <li>Celebrating All Music — classical to contemporary, genre spotlights, student performances</li>
+            <li>Empowering Teachers — instructor spotlights, teaching tips, career growth</li>
+            <li>Community &amp; City Pride — local history, partnerships, cultural events</li>
+            <li>Thought Leadership — trends, research, innovations in music pedagogy</li>
+          </ul>
+          <br>
+          <h4>Content Types</h4>
+          <ul>
+            <li>Blog posts, videos, social media, email newsletters</li>
+            <li>Whitepapers, infographics, podcasts/webinars</li>
+            <li>Press releases, influencer collaborations</li>
+          </ul>
+        </div>
+        <div class="content-col">
+          <h4>6-Month Rollout Plan</h4>
+          <ul>
+            <li><strong>Months 1–2 (Brand Introduction):</strong> Launch #MusicForAll campaign, open house, welcome newsletter — target 1,000 website visits, 500 followers</li>
+            <li><strong>Months 3–4 (Community Engagement):</strong> Child development content, local festival performance, "Share Your Music Story" campaign — target 2,000 followers, 50 inquiries</li>
+            <li><strong>Months 5–6 (Thought Leadership):</strong> Whitepaper launch, panel discussion, #MusicEdTips series — target 3,000 followers, 200 inquiries, 2 media guest posts</li>
+          </ul>
+          <br>
+          <h4>Channel Strategy</h4>
+          <ul>
+            <li>Website (central hub), Instagram (visual), Facebook (community)</li>
+            <li>YouTube (long-form), TikTok (creative shorts), LinkedIn (teacher recruitment)</li>
+            <li>X Platform (real-time), Email (segmented), Local media (PR)</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- FRAMEWORKS -->
+<section id="frameworks">
+  <div class="inner">
+    <div class="section-label">Proprietary Frameworks</div>
+    <h2 class="fw-section-title">The thinking behind the strategy.</h2>
+    <p class="fw-section-sub">These are the repeatable frameworks I've developed and applied across clients. They are not templates — they are thinking tools adapted to every engagement's unique context.</p>
+    <div class="frameworks-grid">
+      <div class="fw-card">
+        <div class="fw-icon">B</div>
+        <div class="fw-name">BBCM Framework</div>
+        <div class="fw-tag-small">FPC Branding Strategy, 2023</div>
+        <p class="fw-desc">A four-pillar brand architecture model that works inside-out — building internal culture before external expression.</p>
+        <div class="fw-items">
+          <div class="fw-item">Brand In — Internal culture &amp; alignment</div>
+          <div class="fw-item">Brand Out — Style guide &amp; external identity</div>
+          <div class="fw-item">Content Strategy — The Vault</div>
+          <div class="fw-item">Measure &amp; Optimise — The Bridge</div>
+        </div>
+      </div>
+      <div class="fw-card">
+        <div class="fw-icon">V</div>
+        <div class="fw-name">ViWC / VEC</div>
+        <div class="fw-tag-small">Gen218singles Strategy, 2023</div>
+        <p class="fw-desc">Platform-native content frameworks that assign each content type a specific job on each platform, preventing cross-posting laziness.</p>
+        <div class="fw-items">
+          <div class="fw-item">ViWC: Videos + Words on Marble + Community</div>
+          <div class="fw-item">VEC: Videos + Excerpts + Community</div>
+          <div class="fw-item">Applied: Instagram vs Facebook mandates</div>
+          <div class="fw-item">Principle: native content over cross-posting</div>
+        </div>
+      </div>
+      <div class="fw-card">
+        <div class="fw-icon">G</div>
+        <div class="fw-name">GAO Framework</div>
+        <div class="fw-tag-small">Gen218singles Strategy, 2023</div>
+        <p class="fw-desc">Go All Out — an omnichannel content expansion model that ensures core content assets are leveraged fully across every available distribution channel.</p>
+        <div class="fw-items">
+          <div class="fw-item">Website (owned media first)</div>
+          <div class="fw-item">Hangouts, Audios, Stories, Vox Pop</div>
+          <div class="fw-item">Future: content studio roadmap</div>
+          <div class="fw-item">Principle: one idea, every format</div>
+        </div>
+      </div>
+      <div class="fw-card">
+        <div class="fw-icon">♡</div>
+        <div class="fw-name">Best Friend Brand</div>
+        <div class="fw-tag-small">FPC Branding Strategy, 2023</div>
+        <p class="fw-desc">A 5-dimension brand relationship model that moves audiences from casual awareness to brand intimacy — the gold standard of community-driven brands.</p>
+        <div class="fw-items">
+          <div class="fw-item">In-dependence — embedded in daily life</div>
+          <div class="fw-item">Love &amp; Passion — anxiety when unavailable</div>
+          <div class="fw-item">Commitment — loyal through bad times</div>
+          <div class="fw-item">Self-Concept + Intimacy</div>
+        </div>
+      </div>
+      <div class="fw-card">
+        <div class="fw-icon">⊕</div>
+        <div class="fw-name">Content Funnel System</div>
+        <div class="fw-tag-small">Portfolio Brief, 2024</div>
+        <p class="fw-desc">A four-stage content movement model that assigns specific platforms and content types to each stage of the audience journey.</p>
+        <div class="fw-items">
+          <div class="fw-item">Awareness → Instagram Reels/Stories</div>
+          <div class="fw-item">Consideration → Facebook Video/Community</div>
+          <div class="fw-item">Conversion → YouTube Deep Content</div>
+          <div class="fw-item">Loyalty → X Community Building</div>
+        </div>
+      </div>
+      <div class="fw-card">
+        <div class="fw-icon">△</div>
+        <div class="fw-name">Crisis Response Protocol</div>
+        <div class="fw-tag-small">Gen218singles &amp; FPC, 2023</div>
+        <p class="fw-desc">A four-step community crisis management framework designed to prevent brand escalations before they require press releases or apologies.</p>
+        <div class="fw-items">
+          <div class="fw-item">Acknowledge — respond, don't ignore</div>
+          <div class="fw-item">Pause — internal review before public reply</div>
+          <div class="fw-item">Protocol — apply pre-written framework</div>
+          <div class="fw-item">Resolve — take offline, follow up privately</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- VIDEO PORTFOLIO -->
+<section id="video">
+  <div class="inner">
+    <div class="video-intro">
+      <div class="section-label">Video Portfolio Briefs</div>
+      <h2>13 production briefs.<br>One cohesive story.</h2>
+      <p>Every brief below documents a real content asset with scene description, voiceover, on-screen credits, and source references drawn directly from live client strategy documents. Together they form a complete portfolio showing range across formats, tones, and platforms.</p>
+    </div>
+    <div class="scene-grid">
+      <div class="scene-card"><div class="sc-num">01</div><div class="sc-type">5-Second Loop</div><div class="sc-title">Content Dashboard Time-Lapse</div><div class="sc-desc">Editorial calendar populating from blank to fully structured — BCM &amp; FPC workflows</div></div>
+      <div class="scene-card"><div class="sc-num">02</div><div class="sc-type">30-Second Clip</div><div class="sc-title">Content Funnel — Whiteboard Draw</div><div class="sc-desc">Awareness → Loyalty funnel mapped live, drawing from Gen218singles platform strategy</div></div>
+      <div class="scene-card"><div class="sc-num">03</div><div class="sc-type">Animated Slide</div><div class="sc-title">Strategy Pillars Drop-In</div><div class="sc-desc">BBCM four-pillar framework animated sequentially — from FPC Branding Strategy deck</div></div>
+      <div class="scene-card"><div class="sc-num">04</div><div class="sc-type">45-Second Tour</div><div class="sc-title">Editorial Workflow Walk-Through</div><div class="sc-desc">Live screen record of content calendar across four simultaneous channels</div></div>
+      <div class="scene-card"><div class="sc-num">05</div><div class="sc-type">Comparison</div><div class="sc-title">Unpolished Draft vs. Final Copy</div><div class="sc-desc">Before/after with annotations — passive to active, generic to branded, no CTA to clear action</div></div>
+      <div class="scene-card"><div class="sc-num">06</div><div class="sc-type">Motion Graphic</div><div class="sc-title">+30% Follower Growth Stat</div><div class="sc-desc">Counter animation with colour burst — sourced from Gen218singles projection slide</div></div>
+      <div class="scene-card"><div class="sc-num">07</div><div class="sc-type">10-Second Clip</div><div class="sc-title">Client / Colleague Testimonial</div><div class="sc-desc">Talking-head format with lower-third credit — speaks to collaboration style</div></div>
+      <div class="scene-card"><div class="sc-num">08</div><div class="sc-type">20-Second Reel</div><div class="sc-title">One Idea — Four Formats</div><div class="sc-desc">Rapid repurposing demo: Blog → LinkedIn → Email → Short Video</div></div>
+      <div class="scene-card"><div class="sc-num">09</div><div class="sc-type">60-Second Record</div><div class="sc-title">Keyword Research Process</div><div class="sc-desc">Gap analysis → keyword intent mapping → content brief creation for BCM</div></div>
+      <div class="scene-card"><div class="sc-num">10</div><div class="sc-type">45-Second Record</div><div class="sc-title">CMS Governance Walk-Through</div><div class="sc-desc">beershebamission.com WordPress dashboard — categories, roles, stages, media library</div></div>
+      <div class="scene-card"><div class="sc-num">11</div><div class="sc-type">30-Second Talking Head</div><div class="sc-title">Current Content Trend Take</div><div class="sc-desc">"Brands winning today build communities, not billboards." Direct-to-camera POV</div></div>
+      <div class="scene-card"><div class="sc-num">12</div><div class="sc-type">Brief Mention</div><div class="sc-title">Brand Crisis Prevention Protocol</div><div class="sc-desc">Real scenario — community thread managed, no escalation, no press release needed</div></div>
+      <div class="scene-card"><div class="sc-num">13</div><div class="sc-type">5-Second Outro</div><div class="sc-title">Branded Outro — TA Identity</div><div class="sc-desc">Logo animation + contact details + CTA: "Let's build something worth reading."</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- SERVICES -->
+<section id="services">
+  <div class="inner">
+    <div class="section-label">Services</div>
+    <h2 style="font-family:var(--serif);font-size:clamp(28px,4vw,48px);font-weight:300;color:var(--white);max-width:620px;line-height:1.15">What I bring to your organisation.</h2>
+    <div class="services-grid">
+      <div class="svc"><div class="svc-num">01</div><div class="svc-name">Brand Strategy</div><div class="svc-desc">Internal culture frameworks, positioning statements, style guides, brand voice and tone documentation, and Best Friend Brand architecture.</div><div class="svc-list"><span>BBCM Framework</span><span>Culture Decks</span><span>Style Guides</span><span>Brand Voice Documentation</span></div></div>
+      <div class="svc"><div class="svc-num">02</div><div class="svc-name">Content Strategy</div><div class="svc-desc">Editorial calendars, content pillar architecture, repurposing frameworks, brief systems, and audience-segmented content plans built to scale.</div><div class="svc-list"><span>Editorial Calendars</span><span>Content Briefs</span><span>Repurpose Frameworks</span><span>Pillar Architecture</span></div></div>
+      <div class="svc"><div class="svc-num">03</div><div class="svc-name">Social Media Strategy</div><div class="svc-desc">Platform-native strategies, audience growth roadmaps, channel-specific content frameworks (ViWC/VEC/GAO), and performance metrics.</div><div class="svc-list"><span>Platform Audits</span><span>Growth Projections</span><span>Native Content Frameworks</span><span>Community Management</span></div></div>
+      <div class="svc"><div class="svc-num">04</div><div class="svc-name">CMS &amp; Editorial Governance</div><div class="svc-desc">WordPress setup, author roles, workflow states, media libraries, and editorial standards that let teams operate without breaking the system.</div><div class="svc-list"><span>WordPress CMS</span><span>Author Permissions</span><span>Workflow Documentation</span><span>SEO Brief Systems</span></div></div>
+      <div class="svc"><div class="svc-num">05</div><div class="svc-name">Crisis Communications</div><div class="svc-desc">Pre-built community management frameworks, scenario-based response protocols, and the systems that prevent escalations before they happen.</div><div class="svc-list"><span>Crisis Documents</span><span>Response Frameworks</span><span>Escalation Protocols</span><span>Community Handbooks</span></div></div>
+      <div class="svc"><div class="svc-num">06</div><div class="svc-name">Video &amp; Creative Production</div><div class="svc-desc">Production briefs, scene direction, on-screen copy, credit standards, and portfolio documentation covering 13 asset categories across formats.</div><div class="svc-list"><span>Production Briefs</span><span>Photography</span><span>Videography</span><span>Copywriting &amp; PR</span></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact">
+  <div class="inner">
+    <div class="contact-grid">
+      <div class="contact-left">
+        <div class="section-label">Contact</div>
+        <h2>Let's build something<br><em>worth reading.</em></h2>
+        <p>I'm available for full-time appointments, project-based engagements, and strategy consulting. If you need a content and brand strategist who works from systems and builds from the inside out, let's talk.</p>
+        <div class="contact-items">
+          <div class="c-item">
+            <div class="c-icon">@</div>
+            <div><div class="c-label">Email</div><div class="c-val">toluwaseabraham@outlook.com</div></div>
+          </div>
+          <div class="c-item">
+            <div class="c-icon">✆</div>
+            <div><div class="c-label">Phone</div><div class="c-val">+234 802 100 1575</div></div>
+          </div>
+          <div class="c-item">
+            <div class="c-icon">◈</div>
+            <div><div class="c-label">Blog / Writing</div><div class="c-val">inwiththepotter.wordpress.com</div></div>
+          </div>
+          <div class="c-item">
+            <div class="c-icon">◉</div>
+            <div><div class="c-label">Location</div><div class="c-val">Ibadan, Oyo State, Nigeria<br><span style="font-size:12px;color:var(--muted)">Available on-site at no extra cost &nbsp;·&nbsp; Remote-ready</span></div></div>
+          </div>
+        </div>
+      </div>
+      <div class="contact-right">
+        <div class="cta-box">
+          <h3>Appointing a Content &amp; Brand Strategist?</h3>
+          <p>I bring strategy documents, live client case studies, a proprietary framework library, and a full-stack creative skill set. Here's what I can start contributing from day one:</p>
+          <div class="cta-tags">
+            <span class="cta-tag">Brand Architecture</span>
+            <span class="cta-tag">Content Systems</span>
+            <span class="cta-tag">Social Strategy</span>
+            <span class="cta-tag">CMS Governance</span>
+            <span class="cta-tag">SEO Content</span>
+            <span class="cta-tag">Crisis Frameworks</span>
+            <span class="cta-tag">Video Production Briefs</span>
+            <span class="cta-tag">Community Management</span>
+            <span class="cta-tag">Editorial Standards</span>
+            <span class="cta-tag">Thought Leadership</span>
+          </div>
+          <a href="mailto:toluwaseabraham@outlook.com" class="btn-primary" style="display:inline-block">Get in Touch ↗</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="foot-logo">Toluwase Abraham &nbsp;·&nbsp; Content &amp; Brand Strategist</div>
+  <div class="foot-note">Ibadan, Nigeria &nbsp;·&nbsp; toluwaseabraham@outlook.com &nbsp;·&nbsp; +234 802 100 1575</div>
+</footer>
+
+</body>
+</html>
